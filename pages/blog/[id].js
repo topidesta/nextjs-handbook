@@ -1,18 +1,18 @@
-import { useRouter } from "next/router";
 import posts from "../../data/posts.json";
 
-const withRouter = () => {
-  const router = useRouter();
-  const post = posts[router.query.id];
-  // penyelesaian
-  if (!post) return <p></p>;
-
+const withRouter = props => {
   return (
-    <>
-      <h1>{post.judul}</h1>
-      <p>{post.konten}</p>
-    </>
+    <div>
+      <h1>{props.post.judul}</h1>
+      <p>{props.post.konten}</p>
+    </div>
   );
+};
+
+withRouter.getInitialProps = ({ query }) => {
+  return {
+    post: posts[query.id]
+  };
 };
 
 export default withRouter;
