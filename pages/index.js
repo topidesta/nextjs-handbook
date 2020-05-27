@@ -1,4 +1,4 @@
-const Index = () => {
+const withRouter = () => {
   return (
     <div>
       <h1>Home Page</h1>
@@ -6,4 +6,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default withRouter;
