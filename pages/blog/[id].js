@@ -1,9 +1,11 @@
 import { useRouter } from "next/router";
 import posts from "../../data/posts.json";
 
-export default () => {
+const withRouter = () => {
   const router = useRouter();
   const post = posts[router.query.id];
+  // penyelesaian
+  if (!post) return <p></p>;
 
   return (
     <>
@@ -12,3 +14,5 @@ export default () => {
     </>
   );
 };
+
+export default withRouter;
