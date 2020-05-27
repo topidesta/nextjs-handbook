@@ -1,0 +1,10 @@
+{
+  "test": {
+    "judul": "Judul Posting",
+    "content": "Content Posting"
+  },
+  "kedua": {
+    "judul": "Judul Posting Kedua",
+    "content": "Content posting Kedua"
+  }
+}
